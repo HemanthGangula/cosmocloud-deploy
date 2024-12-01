@@ -61,6 +61,8 @@ This repository contains a Helm chart for deploying an application stack compris
     helm uninstall testapp
     ```
 
+
+
 ## Project Structure
 ```bash
 cosmocloud-deploy/
