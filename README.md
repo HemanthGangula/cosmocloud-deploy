@@ -37,24 +37,29 @@ This repository contains a Helm chart for deploying an application stack compris
 
 ### 4. Deploying the Application
 - Installed the Helm chart:
-  ```bash
-  helm install testapp ./cosmocloud-deploy --atomic --timeout 30s
-  ```
+    ```bash
+    helm install testapp ./cosmocloud-deploy --atomic --timeout 30s
+    ```
 - Verified the deployment:
-  ```bash
-  kubectl get pods
-  kubectl get services
-  ```
+    ```bash
+    kubectl get pods
+    kubectl get services
+    ```
+- Accessing the Application:
+    - Retrieved the Minikube IP:
+    ```bash
+    minikube ip
+    ```
+    - Opened the frontend service in the browser:
+    ```bash
+    http://<minikube-ip>:31000
+    ```
 
-### 5. Accessing the Application
-- Retrieved the Minikube IP:
-  ```bash
-  minikube ip
-  ```
-- Opened the frontend service in the browser:
-  ```arduino
-  http://<minikube-ip>:31000
-  ```
+### 5. Cleaning Up
+- Uninstalled the Helm chart:
+    ```bash
+    helm uninstall testapp
+    ```
 
 ## Project Structure
 ```bash
