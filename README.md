@@ -60,7 +60,10 @@ This repository contains a Helm chart for deploying an application stack compris
     ```bash
     helm uninstall testapp
     ```
-
+### Lessons Learned
+- Gained practical experience with Helm and Kubernetes.
+- Improved understanding of environment variable management in Kubernetes.
+- Learned how to structure Helm charts for better readability and maintainability.
 
 
 ## Project Structure
