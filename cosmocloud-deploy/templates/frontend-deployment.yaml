@@ -15,10 +15,15 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
-        image: shreybatra/sample-frontend
-        ports:
-        - containerPort: 5175
-        env:
-        - name: BACKEND_URL
-          value: http://backend-svc:8000
+        - name: frontend
+          image: shreybatra/sample-frontend
+          ports:
+            - containerPort: 5173
+          env:
+            - name: VITE_BACKEND_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: VITE_BACKEND_URL
+          command: ["npm", "run", "preview"]
+          args: ["--", "--host", "0.0.0.0"]

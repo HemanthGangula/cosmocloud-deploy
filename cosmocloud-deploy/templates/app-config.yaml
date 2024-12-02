@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  VITE_BACKEND_URL: "http://192.168.49.2:30080"
+  REDIS_URI: "redis://redis-svc:6379"
